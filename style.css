@@ -119,6 +119,9 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-basis: 35%;
 }
 
@@ -319,15 +322,23 @@ width: 100%;
 }
 
 /* ----------CONTACT---------- */
+#contact_row{
+  display: flex;
+  justify-content: center;
+
+}
 .contact-left {
   flex-basis: 35%;
 }
 
 .contact-right {
+  padding-left: 20px;
+  padding-right: 40px;
   flex-basis: 60%;
 }
 
 .contact-left p {
+  display: flex;
   margin-top: 30px;
 }
 
@@ -339,7 +350,6 @@ width: 100%;
 
 .social-icons {
   margin-top: 30px;
-  display: flex;
 }
 
 .social-icons a {
@@ -495,5 +505,24 @@ nav .fas {
   nav ul li {
       display: block;
       margin: 25px;
+  }
+  .contact-left p{
+    display: flex;
+    justify-content: center;
+  }
+  .social-icons{
+    display: flex;
+    margin-left: 8%;
+    justify-content: center;
+  }
+  .btn.btn2 {
+    display: grid;
+    align-items: center;
+  }
+  
+  .contact-right {
+    padding-left: 0px;
+    padding-right: 0px;
+    flex-basis: 60%;
   }
 }
