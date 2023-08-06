@@ -47,10 +47,14 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 15px;
 }
 
 .logo {
    width: 200px;
+}
+h3{
+  margin-left: 1.5%;
 }
 h3:hover{
   color: #ff2b2b;
@@ -85,12 +89,37 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-  margin-top: 50%;
-  margin-left: 30%;
-  margin-right: 5%;
+  margin-top: 40%;
+  margin-left: 50%;
+
   font-size: 20px;
   transition: 0.5s;
   cursor: pointer;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+.header-text{
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: black;
+  }
 }
 
 .header-text h1 {
@@ -436,7 +465,7 @@ nav .fas {
  
   .header-text {
       margin-top: 100%;
-      margin-left: 18%;
+      margin-left: 5%;
       font-size: 16px;
   }
 
@@ -473,13 +502,17 @@ nav .fas {
 
   .header-text {
       margin-top: 100%;
-      font-size: 16px;
+      font-size: 18px;
   }
 
   .header-text h1 {
-      font-size: 30px;
+      font-size: 35px;
   }
-
+  .header-text:hover h1{
+    -webkit-text-stroke: 1.5px #fff;
+    color: transparent;
+    
+  }
 
   nav ul {
       display: none;
@@ -489,12 +522,15 @@ nav .fas {
       display: flex;
       justify-content: center;
       align-content: start; 
-      font-size: 25px;
+      font-size: 20px;
       cursor: pointer;
+      margin-right: 3%;
   }
   .fas:hover{
     color: #ff2b2b;
   }
+
+  
 
   nav ul {
       background: rgba(51, 51, 51, 1);
